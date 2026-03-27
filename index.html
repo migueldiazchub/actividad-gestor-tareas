@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="header-container">
+        <div id="header-nombre"></div>
+        <div id="header-nav"></div>
+      </div>
+    </header>
+    <main>
+      <div id="menu-tareas">
+        <div id="menu-tareas-escondible">
+          <div id="datos-nueva-tarea">
+            <div id="titulo-nueva-tarea">
+              <p>Título de la tarea</p>
+              <input
+                id="input-titulo-tarea"
+                placeholder="Escribe el nombre de la nueva tarea"
+              />
+            </div>
+            <div id="cuerpo-nueva-tarea">
+              <p>Cuerpo de la tarea</p>
+              <textarea
+                id="input-cuerpo-tarea"
+                placeholder="Escribe la descripción de la tarea"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div id="botones-menu">
+          <button id="btn-agregar-tarea">Añadir tarea</button>
+          <button id="btn-mostrar-inputs-tarea">Añadir tarea</button>
+        </div>
+      </div>
+      <div id="lista-tareas"></div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
