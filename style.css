@@ -98,6 +98,36 @@ textarea {
     width: 20%;
 
     position: absolute;
-    top: 0;
+    top: 2%;
     right: -0%;
+}
+
+.tarea {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    margin-bottom: 0.2rem;
+}
+
+.tarea-titulo {
+    height: 2rem;
+
+    font-weight: bold;
+    background-color: rgb(226, 117, 117);
+}
+
+.tarea-cuerpo {
+    min-height: 4rem;
+    
+    background-color: rgb(255, 175, 175);
+    display: none;
+}
+
+.btn-completar-tarea{
+    display: none;
+}
+
+.btn-eliminar-tarea{
+    display: none;
 }
