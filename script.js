@@ -21,8 +21,20 @@ $(document).ready(function () {
 
   $("#btn-agregar-tarea").click(function(){
     let tarea = $("<div>").addClass("tarea");
-    let titulo = $("<p>").addClass("tarea-titulo").text($("#input-titulo-tarea").val());
-    let cuerpo = $("<p>").addClass("tarea-cuerpo").text($("#input-cuerpo-tarea").val());
+
+    let titulo = $("<p>").addClass("tarea-titulo");
+    if($("#input-titulo-tarea").val() == ""){
+      titulo.text("Tarea sin título");
+    } else {
+      titulo.text($("#input-titulo-tarea").val());
+    }
+    
+    let cuerpo = $("<p>").addClass("tarea-cuerpo");
+    if($("#input-cuerpo-tarea").val() == ""){
+      cuerpo.text("No hay descripción");
+    } else {
+      cuerpo.text($("#input-cuerpo-tarea").val());
+    }
 
     $(tarea).append(titulo);
     $(tarea).append(cuerpo);
@@ -46,7 +58,11 @@ $(document).ready(function () {
   });
 
   $("#lista-tareas").on("click", ".btn-completar-tarea", function(){
-    $(this).siblings(".tarea-titulo").css("background-color", rgb(117, 226, 122));
-    $(this).siblings(".tarea-cuerpo").css("background-color", rgb(179, 255, 175));
+    $(this).siblings(".tarea-titulo").css("background-color", "rgb(117, 226, 122)");
+    $(this).siblings(".tarea-cuerpo").css("background-color", "rgb(179, 255, 175)");
   });
+
+  $("#lista-tareas").on("click", ".btn-eliminar-tarea", function(){
+    $(this).parent().remove();
+  })
 });

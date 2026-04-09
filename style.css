@@ -6,13 +6,13 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: rgb(255, 230, 230);
 }
 
 header {
     height: 12vh;
 
-    background-color: grey;
+    background-color: rgb(255, 132, 132);
 
     align-content: center;
 }
@@ -26,8 +26,11 @@ main {
     width: 90%;
     margin: auto;
 
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+    font-size: 4rem;
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 5px #ff1414;
 }
 
 #menu-tareas {
@@ -76,6 +79,19 @@ textarea {
     resize: none;
 }
 
+button {
+    background-color:rgb(255, 132, 132);
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: rgb(255, 243, 243);
+}
+
+button:active {
+    background-color: rgb(236, 76, 76);
+}
+
 #botones-menu {
     height: 20%;
     
@@ -114,7 +130,7 @@ textarea {
     height: 2rem;
 
     font-weight: bold;
-    background-color: rgb(226, 117, 117);
+    background-color: rgb(255, 99, 99);
 }
 
 .tarea-cuerpo {
@@ -130,4 +146,8 @@ textarea {
 
 .btn-eliminar-tarea{
     display: none;
+}
+
+button {
+    border-radius: 5px;
 }
